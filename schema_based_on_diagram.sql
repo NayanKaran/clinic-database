@@ -17,3 +17,9 @@ CREATE TABLE treatments(
     type varchar(50) NOT NULL,
     name varchar(50) NOT NULL
 );
+
+CREATE TABLE medical_history_treatments(
+    medical_history_id integer NOT NULL REFERENCES medical_histories(id),
+    treatment_id integer NOT NULL REFERENCES treatments(id),
+    PRIMARY KEY (medical_history_id, treatment_id)
+);
