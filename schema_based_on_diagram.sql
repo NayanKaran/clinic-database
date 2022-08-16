@@ -11,3 +11,9 @@ CREATE TABLE medical_histories(
     admitted_at timestamp NOT NULL,
     status varchar(50) NOT NULL
 );
+
+CREATE TABLE treatments(
+    id SERIAL PRIMARY KEY,
+    type varchar(50) NOT NULL,
+    name varchar(50) NOT NULL
+);
